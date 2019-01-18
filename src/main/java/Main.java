@@ -19,5 +19,7 @@ public class Main {
         for (Bike b : coolBikes){
             System.out.println(b);
         }
+
+        System.out.println("Test");
     }
 }
