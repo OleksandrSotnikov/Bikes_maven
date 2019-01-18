@@ -11,6 +11,8 @@ public class Bike {
     @CsvBindByName(column = "year")
     private int year;
 
+
+
     @CsvBindByName(column = "capacity")
     private int capacity;
 
