@@ -64,13 +64,33 @@ public class Main {
 
 
         ArrayList<Bike> mySortedBike = Filtering.filteringByManyParam(bikes, "Suzuki", "DL");
-        for (Bike c: mySortedBike){
+        for (Bike c : mySortedBike) {
             System.out.println(c);
         }
+
+        Bike myPowerfullBIke = Filtering.theMostPowerfulBike(bikes);
+        try {
+            PrintWriter writer = new PrintWriter("D:\\Java\\Powerfull_Mother_Fucker.csv");
+            writer.println(myPowerfullBIke);
+            writer.flush();
+            writer.close();
+        } catch (Exception x) {
+            System.out.println("Something wrong with file storage " + x.getMessage());
+            System.exit(1);
+        }
+
+        System.out.println("---------------");
+        System.out.println();
+        System.out.println("The Oldest Bike is: ");
+
+        Bike myOldestBike = Filtering.theOldesOne(bikes);
+        System.out.println(myOldestBike);
+
+
+
     }
-
-
 }
+
 
 
 

@@ -33,18 +33,6 @@ public class Bike {
 
     public Bike() {}
 
-    public Bike (String brand, String model, int year, int capacity, int hp, int weight, int tank, int maxSpeed, double acceleration ){
-        this.brand = brand;
-        this.model = model;
-        this.year = year;
-        this.capacity = capacity;
-        this.hp = hp;
-        this.weight = weight;
-        this.tank = tank;
-        this.speed = maxSpeed;
-        this.acceleration = acceleration;
-    }
-
     public String getBrand() {
         return brand;
     }

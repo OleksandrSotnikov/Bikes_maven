@@ -49,6 +49,30 @@ public class Filtering {
         }
 
         return allbikes;
+
+    }
+
+    public static Bike theMostPowerfulBike(List<Bike> MyList){
+        Bike powerful = MyList.get(0);
+        for (Bike bike : MyList) {
+            if (powerful.getHp() < bike.getHp()){
+            powerful = bike;
+            }
+        }
+
+        return powerful;
+
+
+    }
+
+    public static Bike theOldesOne(List<Bike> MyList){
+        Bike oldest = MyList.get(0);
+        for (Bike bike: MyList){
+            if(oldest.getYear() > bike.getYear()){
+                oldest = bike;
+            }
+        }
+        return oldest;
     }
 }
 
