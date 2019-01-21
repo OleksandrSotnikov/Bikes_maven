@@ -43,7 +43,7 @@ public class Main {
         ArrayList<Bike> myShinyBike1 = Filtering.filterByHPRange(bikes, 100, 200);
 
         try {
-            PrintWriter writer = new PrintWriter("D:\\Java\\Filtered_Moto_By_Capasity_Range.csv");
+            PrintWriter writer = new PrintWriter("D:\\Java\\Filtered_Moto_By_HP_Range.csv");
             for (Bike x : myShinyBike1) {
                 writer.println(x);
 
@@ -57,12 +57,25 @@ public class Main {
 
         }
 
+        Bike myFastestBike = Filtering.theFastesIndian(bikes);
+        System.out.println(myFastestBike);
+
+        System.out.println("-----------------");
 
 
+        ArrayList<Bike> mySortedBike = Filtering.filteringByManyParam(bikes, "Suzuki", "DL");
+        for (Bike c: mySortedBike){
+            System.out.println(c);
+        }
     }
 
 
 }
+
+
+
+
+
 
 
 

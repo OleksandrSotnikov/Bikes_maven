@@ -29,20 +29,28 @@ public class Filtering {
         return allbikes;
     }
 
-    public static ArrayList<Bike> theFastesIndian(List<Bike> MyList) {
-        ArrayList<Bike> allbikes = new ArrayList<>();
-        int maxspeed = 0;
+    public static Bike theFastesIndian(List<Bike> MyList) {
+        Bike fastest = MyList.get(0);
         for (Bike bike : MyList) {
-            if (maxspeed < bike.getMaxSpeed()) {
-                int i = 0;
-                allbikes.add(bike);
-                i++;
+            if (fastest.getMaxSpeed() < bike.getMaxSpeed()) {
+                fastest = bike;
             }
-
-
         }
+
+        return fastest;
+    }
+
+    public static ArrayList<Bike> filteringByManyParam (List<Bike> MyList, String brand, String model) {
+        ArrayList <Bike> allbikes = new ArrayList<>();
+        for (Bike bike: MyList){
+            if (bike.getBrand().equals(brand) && bike.getModel().contains(model)){
+                allbikes.add(bike);
+            }
+        }
+
         return allbikes;
     }
 }
+
 
 
