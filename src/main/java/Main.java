@@ -86,10 +86,22 @@ public class Main {
         Bike myOldestBike = Filtering.theOldesOne(bikes);
         System.out.println(myOldestBike);
 
+        System.out.println();
+        System.out.println("----- New ---- Request----");
+
+        ArrayList<Bike> myFastOne = Filtering.filteringByAcc(bikes, 3);
+        if (myFastOne.size()==0){
+                System.out.println("None bike was found accordingly to your parameters");
+            } else {
+            for (Bike b: myFastOne)
+                System.out.println(b);
+            }
+        }
+
 
 
     }
-}
+
 
 
 

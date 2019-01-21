@@ -40,10 +40,10 @@ public class Filtering {
         return fastest;
     }
 
-    public static ArrayList<Bike> filteringByManyParam (List<Bike> MyList, String brand, String model) {
-        ArrayList <Bike> allbikes = new ArrayList<>();
-        for (Bike bike: MyList){
-            if (bike.getBrand().equals(brand) && bike.getModel().contains(model)){
+    public static ArrayList<Bike> filteringByManyParam(List<Bike> MyList, String brand, String model) {
+        ArrayList<Bike> allbikes = new ArrayList<>();
+        for (Bike bike : MyList) {
+            if (bike.getBrand().equals(brand) && bike.getModel().contains(model)) {
                 allbikes.add(bike);
             }
         }
@@ -52,11 +52,11 @@ public class Filtering {
 
     }
 
-    public static Bike theMostPowerfulBike(List<Bike> MyList){
+    public static Bike theMostPowerfulBike(List<Bike> MyList) {
         Bike powerful = MyList.get(0);
         for (Bike bike : MyList) {
-            if (powerful.getHp() < bike.getHp()){
-            powerful = bike;
+            if (powerful.getHp() < bike.getHp()) {
+                powerful = bike;
             }
         }
 
@@ -65,16 +65,30 @@ public class Filtering {
 
     }
 
-    public static Bike theOldesOne(List<Bike> MyList){
+    public static Bike theOldesOne(List<Bike> MyList) {
         Bike oldest = MyList.get(0);
-        for (Bike bike: MyList){
-            if(oldest.getYear() > bike.getYear()){
+        for (Bike bike : MyList) {
+            if (oldest.getYear() > bike.getYear()) {
                 oldest = bike;
             }
         }
         return oldest;
+
+
     }
-}
+
+    public static ArrayList<Bike> filteringByAcc(List<Bike> MyList, double acc) {
+        ArrayList<Bike> allbikes = new ArrayList<>();
+        for (Bike bike : MyList) {
+            if (bike.getAcceleration() <= acc) {
+                allbikes.add(bike);
+
+            }
+        }
+            return allbikes;
+        }
+    }
+
 
 
 
